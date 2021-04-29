@@ -6,7 +6,7 @@ import { MarkaComponent } from './marka/marka.component';
 import { PrezentacjaComponent } from './prezentacja/prezentacja.component';
 import { SpacerComponent } from './spacer/spacer.component';
 import { SprzetComponent } from './sprzet/sprzet.component';
-
+import { PreloadAllModules } from '@angular/router';
 const routes: Routes = [
   {path:"prezentacja",component:PrezentacjaComponent},
   {path:"",component:PrezentacjaComponent},
@@ -23,3 +23,9 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+RouterModule.forRoot(
+  routes,
+  {
+    preloadingStrategy: PreloadAllModules
+  }
+)

@@ -30,6 +30,7 @@ export class PrezentacjaComponent implements OnInit {
   getPosts() {
     this.httpClient.get<any>('http://localhost:80/Typescript/mixbocianapi/posty.php').subscribe(resp=>{
       this.posts = resp;
+      console.log(this.posts);
     });
   }
   
