@@ -1,0 +1,16 @@
+[{
+    "title":"KitchenAid",
+    "desc": "Miksery marki KitchenAid oddają mocno",
+    "src": ["assets/img/1.jpg","assets/img/2.jpg"]
+  },
+  {
+    "title":"KitchenAid",
+    "desc": "Miksery marki KitchenAid oddają mocno",
+    "src": ["assets/img/1.jpg","assets/img/2.jpg"]
+  },
+{
+    "title":"KitchenAid",
+    "desc": "Miksery marki KitchenAid oddają mocno",
+    "src": ["assets/img/1.jpg"]
+  }
+]

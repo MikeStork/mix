@@ -1,0 +1,27 @@
+<div class="box"></div>
+<div id="pic" class="alling">
+  <div class="wrasp mrg-100-d mrg-100-u">
+    <div class="gal_title">
+      <span class="zwrot">Meble kuchenne</span>
+    </div>
+    <div id="galer">
+      <a *ngFor="let m of marks[0]" [routerLink]="['marka',m.name]">
+        <div class="card">
+          <img src="{{ m.src }}" />
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="wrasp mrg-100-d">
+    <div class="gal_title">
+      <span class="zwrot">Sprzęt AGD</span>
+    </div>
+    <div id="galer">
+        <a *ngFor="let m of marks[1]" [routerLink]="['marka',m.name]">
+      <div class="card">
+        <img src="{{ m.src }}" />
+      </div>
+    </a>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,82 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Mix</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>MixBocian</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mix-Bocian</title><script src="assets/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+  </head>
+
+  <body style="z-index: -10">
+    <div class="banner" style="position: fixed">
+      <div class="welcome">
+        <img class="logo" src="assets/img/logo.png" alt="">
+    </div>
+      <div class="sh">
+        <img src="assets/img/1.jpg" alt="" class="cfi" />
+        <img src="assets/img/2.jpg" alt="" class="cfi" />
+        <img src="assets/img/3.jpg" alt="" class="cfi" />
+        <img src="assets/img/4.jpg" alt="" class="cfi" />
+        <img src="assets/img/5.jpg" alt="" class="cfi" />
+      </div>
+    </div>
+    
+    <app-root></app-root>
+    
+  </body>
+  <script>
+    window.onscroll = function (ev) {
+      if (window.scrollY > -window.innerHeight) {
+      }
+    };
+
+    function init_crossFade() {
+      var setBackground = {
+        crossFadeImages: [].slice.call(document.querySelectorAll(".cfi")),
+        randomize: function (arrayLength) {
+          randomNumber = Math.floor(arrayLength * Math.random());
+          return randomNumber;
+        },
+
+        setImageOnLoad: function (path) {
+          setBackground.crossFadeImages[path].classList.add("cfi--active");
+          var active = document.querySelector(".cfi--active");
+          return active;
+        },
+
+        setNextImage: function (activeImage) {
+          setTimeout(function () {
+            activeImage.classList.remove("cfi--active");
+            var nextImage;
+            if (activeImage.nextElementSibling !== null) {
+              nextImage = activeImage.nextElementSibling;
+            } else {
+              nextImage = document.querySelector(".cfi");
+            }
+            nextImage.classList.add("cfi--active");
+            setTimeout(function () {
+              setBackground.setNextImage(nextImage);
+            }, 3000);
+          }, 3000);
+        },
+      };
+
+      var randomNumber = setBackground.randomize(
+        setBackground.crossFadeImages.length
+      );
+      var activeImage = setBackground.setImageOnLoad(randomNumber);
+      setBackground.setNextImage(activeImage);
+    }
+
+    try {
+      init_crossFade();
+    } catch (ev) {
+      document.querySelector(".cfi").classList.add("cfi--active");
+    }
+  </script>
 </html>

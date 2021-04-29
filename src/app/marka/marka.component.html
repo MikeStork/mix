@@ -1,0 +1,22 @@
+<div class="box"></div>
+<div id="pic" class="alling">
+  <div class="wrasp mrg-100-d mrg-100-u">
+    <div class="gal_title">
+      <span class="zwrot">Produkty firmy {{nazwa}}</span>
+    </div>
+    <div class="filtertools">
+      <nav class="search"><input type="text" class="searchbar" [(ngModel)]="filtr"><button class="searchbut" (click)="getMarks(nazwa)">Filtruj</button></nav>
+    </div>
+    <div id="galer">
+        <div class="notfound" *ngIf="items.length==0">
+          <h2>Nie znaleziono żadnych wyników</h2>
+        </div>
+      <a *ngFor="let i of items; let j = index" [routerLink]="['item',nazwa, j, filtr]">
+        <div class="card">
+          <img src="{{i.src}}" />
+          <p>{{i.name}}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

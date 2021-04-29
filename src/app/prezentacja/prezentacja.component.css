@@ -1,0 +1,13 @@
+.slidbtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+}
+.fade-carousel .carousel-inner .item  {
+    opacity:0 !important;
+    -webkit-transition: 5s opacity ease-in-out !important;
+       -moz-transition: 5s opacity ease-in-out !important;
+        -ms-transition: 5s opacity ease-in-out !important; 
+         -o-transition: 5s opacity ease-in-out !important; 
+            transition: 5s opacity ease-in-out !important;
+    left:0 !important;
+}

@@ -1,0 +1,21 @@
+<div class="box"></div>
+<div class="rown flexit mrg-200-u mrg-100-d" *ngFor="let item of posts">
+  <div id="addf">
+    <div class="text dark-theme">{{ item.desc }}</div>
+    <div class="my-slide w-100">
+      <ngb-carousel *ngIf="posts && item.src.length > 1">
+        <ng-template ngbSlide *ngFor="let i of item.src">
+          <div class="picsum-img-wrapper">
+            <img data-src="{{ i }}" class="d-block w-100" alt="Random first slide" />
+          </div>
+        </ng-template>
+      </ngb-carousel>
+      <img
+        *ngIf="item.src.length == 1"
+        src="{{ item.src[0] }}"
+        class="d-block w-100"
+        alt="Random first slide"
+      />
+    </div>
+  </div>
+</div>

@@ -1,1 +1,641 @@
-/* You can add global styles to this file, and also import other style files */
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:100,400&display=swap'); */
+
+/* FONTY */
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonty/Montserrat/Montserrat-ExtraLight.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Oxygen";
+  src: url("assets/fonty/Oxygen/Oxygen-Light.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* overflow-y: hidden; */
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #2c2c2c;
+  /* background: url("https://www.toptal.com/designers/subtlepatterns/patterns/dirty_old_shirt.png"); */
+  background-repeat: repeat;
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+
+a {
+  text-decoration: none;
+  color: snow;
+}
+
+a:visited {
+  text-decoration: none;
+  color: snow;
+}
+
+.navi a:hover {
+  color: rgb(156, 4, 4);
+  text-decoration: none;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 40vh;
+}
+
+.navi {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(53, 54, 56);
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+}
+
+.navi ul {
+  margin-top: auto;
+  margin-bottom: auto;
+  list-style: none;
+  margin: 0;
+  height: 80px;
+  position: absolute;
+  top: 15px;
+}
+
+.navi li {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  float: left;
+  font-size: 2.5em;
+  margin-left: 30px;
+  color: rgba(255, 250, 250, 0.863);
+  height: 100%;
+}
+
+/* ////////////////////////////////////////// */
+
+/* kod slidera */
+
+/* ////////////////////////////////////////// */
+
+.cfi {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transition: all 2s ease-in-out;
+  object-fit: cover;
+}
+
+.cfi--active {
+  opacity: 1;
+}
+
+/* @media (orientation: portrait) {
+    .cfi {
+      left: -60%;
+      text-align: center;
+      width: 240vw;
+    }
+  } */
+
+.banner {
+  box-sizing: border-box;
+  height: max-content;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  content: " ";
+  margin-left: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.logo {
+  width: 40vmin;
+}
+
+/* /////////////////// */
+
+/* zdjęcia przestrzenne */
+
+/* /////////////////// */
+
+#trzydview {
+  object-fit: fill;
+  width: 600px;
+  height: 600px;
+}
+
+/*
+  #trzydpack {
+      z-index: 2;
+      position: relative;
+      text-align: center;
+  } */
+
+/* //////////////////////////////// */
+
+/* koła poruszania - kontrolki */
+
+/* //////////////////////////////// */
+
+.pol1 {
+  position: absolute;
+  bottom: 20px;
+  z-index: 21;
+}
+
+.pol2 {
+  position: absolute;
+  bottom: 20px;
+  z-index: 20;
+}
+
+/* animacje przycisków */
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* .breakof2 {
+      display: block;
+      position: absolute;
+      height: 30px;
+      width: 120%;
+      bottom: -15px;
+      /* background-color: rgb(255, 255, 255); */
+
+/*
+  background-image: url(img/connector.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat-x;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  }
+  div class="breakof2"></div>
+  */
+
+/* Projekt do zastanowienia się nad
+  .podpol {
+      display: block;
+      position: absolute;
+      height: 180px;
+      width: 80px;
+      bottom: -95px;
+      background-color: rgb(95, 95, 95);
+      border-radius: 50px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+  } 
+  
+  <div class="podpol">a
+      </div> */
+
+/* .pol3 {
+      position: absolute;
+      top: 190vh;
+  }
+  
+  .pol4 {
+      position: absolute;
+      top: 205vh;
+  } */
+
+.kolo {
+  box-sizing: border-box;
+  background-color: rgba(169, 179, 255, 0.253);
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid #4155e8;
+  z-index: 3;
+  color: snow;
+}
+
+.kolo:hover {
+  background-color: rgba(201, 201, 201, 0.925);
+  transition: 0.5s ease;
+  border: snow;
+}
+
+.arrow {
+  position: relative;
+  border: 2px solid #4155e8;
+  border-width: 0 2px 2px 0;
+  padding: 10px;
+  margin: 20% 30% 20%;
+  z-index: 4;
+}
+
+.dow {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.upp {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+#pic {
+  background-color: #2c2c2c00;
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px 0;
+}
+
+.menu {
+  display: none;
+}
+
+@media only screen and (max-width: 1240px) {
+  .navi ul {
+    display: none;
+  }
+  .menu {
+    display: block;
+    flex: 1;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    color: snow;
+    font-size: 3em;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 20px;
+    margin-top: 10px;
+    z-index: 40;
+    cursor: pointer;
+  }
+  .menu-content {
+    display: none;
+  }
+  .menu:hover .menu-content {
+    display: block;
+  }
+  .menu:hover ul {
+    padding: 10px;
+    background-color: rgba(53, 54, 56, 0.753);
+  }
+  .menu:hover li {
+    margin-top: 3px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #pic {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .kolo {
+    display: none;
+  }
+}
+
+/* ////////////////////////GALERIA////////////////////// */
+
+.alling {
+  position: relative;
+  overflow: hidden;
+}
+
+.color {
+  background-color: #2c2c2c;
+}
+
+#galer {
+  position: relative;
+  /* margin-top: 100px; ze względu na gal_title */
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  align-self: center;
+  width: fit-content;
+  /* max-width: 1150px; */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.gal_title {
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+}
+
+.wrasp {
+  position: relative;
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #2c2c2cde;
+  border-radius: 15px;
+  background: rgba(45, 45, 45, 0.8);
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 67%);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gal {
+  width: 200px;
+  margin: 15px;
+  transition: all 0.2s linear;
+}
+
+.gal:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+/* height: calc(przyjmuje wartości, oraz wartości schowane w klasie) */
+
+#galer a {
+  overflow: hidden;
+}
+
+/* ////////////////////////////////////////// */
+
+/* div produktów  */
+
+/* ////////////////////////////////////////// */
+
+/* ////////////////////////////////////////// */
+
+/* produkty */
+
+/* ////////////////////////////////////////// */
+
+/* ////////////////////////////////////////// */
+
+/* tabelki w aktualnosciach */
+
+/* ////////////////////////////////////////// */
+
+.flexit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 10px 0;
+}
+
+.mrg-200-u {
+  margin-top: 200px;
+}
+
+.mrg-100-d {
+  margin-bottom: 100px;
+}
+
+input {
+  background-color: #2c2c2c;
+}
+
+.sukces {
+  color: #1d1;
+}
+
+.error {
+  color: #d11;
+}
+
+#addf {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 700px;
+  width: 100%;
+  max-height: 600px;
+  border-radius: 15px;
+  background: rgba(45, 45, 45, 0.9);
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 67%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 0 20px 0;
+}
+
+#addf .text {
+  display: inline-block;
+  min-height: 100px;
+  max-width: 700px;
+  flex: 1;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+  font-family: Oxygen, sans-serif;
+  border-radius: unset;
+  word-wrap: break-word;
+  overflow: hidden;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+
+.my-slide {
+  flex: 4;
+  align-items: center;
+  overflow: hidden;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  margin: 1px;
+}
+
+.carousel-item img {
+  margin-top: auto;
+  margin-bottom: auto;
+  object-fit: scale-down;
+  max-height: -webkit-fill-available;
+}
+
+.srodek {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  /* height: 400px !important; */
+}
+
+.welcome {
+  position: absolute;
+  top: 110px;
+  left: 30px;
+  /* max-width: 400px; */
+  color: snow;
+  font-weight: 100;
+  font-size: large;
+  z-index: 2;
+}
+.welcome .logo {
+  width: calc(30vw+20px);
+}
+
+.mrg-200-u {
+  margin-top: 200px;
+}
+.mrg-100-u {
+  margin-top: 100px;
+}
+
+.mrg-100-d {
+  margin-bottom: 100px;
+}
+
+
+input {
+  background-color: #2c2c2c;
+}
+
+.sukces {
+  color: #1d1;
+}
+
+.error {
+  color: #d11;
+}
+
+@media screen and (max-device-width: 720px) {
+  .slide {
+    width: 100%;
+  }
+}
+
+.s-img {
+  /* height: 600px; */
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  /* width: 600vmin; */
+  /* object-fit: contain; */
+}
+
+
+.loc-text {
+  height: fit-content !important;
+  flex: none !important;
+  background-color: #4e4e4e !important;
+  color: rgb(255, 255, 255) !important;
+  font-family: "Montserrat" !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+
+.slide {
+  height: 100%;
+}
+
+
+.dark-theme {
+  background-color: #74747445;
+  color: rgb(255, 255, 255) !important;
+  border: 1px solid rgba(255, 255, 255, 0.062)
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+input {
+  width: 100% !important;
+}
+* {
+  overflow-x: unset;
+}
+body::-webkit-scrollbar {
+  width: 0.8em;
+  scroll-behavior: smooth;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: none;
+  border-radius: 10px;
+}
+.gal_title {
+  padding: 10px;
+  display: block;
+  overflow: hidden;
+}
+.zwrot {
+  color: snow;
+  margin: 25vh 0 25vh;
+  max-height: 400px;
+  width: fit-content;
+  font-size: 3em;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+}
