@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 // import sprzety from "../data/sprzety.json";
 import { HttpClient } from '@angular/common/http';
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-marka',
   templateUrl: './marka.component.html',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MarkaComponent implements OnInit {
 
-  constructor(private activeRoute: ActivatedRoute,private httpClient: HttpClient) { }
+  constructor(private activeRoute: ActivatedRoute,private httpClient: HttpClient, private _location: Location) { }
   items;
   nazwa:string;
   filtr:string='';
@@ -19,6 +20,9 @@ export class MarkaComponent implements OnInit {
       this.nazwa = param.id;
       console.log(this.items);
     });
+  }
+  goBack() {
+    this._location.back();
   }
   getMarks(sel:String) {
     if(this.filtr){

@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import marki from '../data/marki.json';
-
 @Component({
   selector: 'app-sprzet',
   templateUrl: './sprzet.component.html',

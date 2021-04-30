@@ -5,6 +5,7 @@
       <span class="zwrot">Produkty firmy {{nazwa}}</span>
     </div>
     <div class="filtertools">
+      <button (click)="goBack()" class="cofnij">Cofnij</button>
       <nav class="search"><input type="text" class="searchbar" [(ngModel)]="filtr"><button class="searchbut" (click)="getMarks(nazwa)">Filtruj</button></nav>
     </div>
     <div id="galer">

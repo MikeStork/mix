@@ -77,3 +77,21 @@
   display: flex;
   flex-direction: column;
 }
+.cofnij{
+  float: left;
+  margin-left: 10px;
+  background: rgba(45, 45, 45, 0.05);
+  box-shadow: 0 8px 32px 0 rgb(0 0 0 / 67%);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: aliceblue;
+  padding: 5px 10px;
+}
+.cofnij:hover{
+  background: rgba(45, 45, 45, 0);
+  box-shadow: 0 4px 16px 0 rgb(255 255 255 / 20%);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255);
+  transition: .1s ease-out;
+}

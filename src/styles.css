@@ -125,6 +125,7 @@ a:hover,a:active {
 
 .logo {
   height: 70px;
+  padding-top: 10px;
 }
 
 /* /////////////////// */
@@ -637,4 +638,8 @@ body::-webkit-scrollbar-thumb {
   font-size: 3em;
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
+}
+.nav-link{
+  font-size: 1.75em;
+  text-align: center;
 }

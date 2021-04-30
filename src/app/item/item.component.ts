@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import sprzety from "../data/sprzety.json";
 import { HttpClient } from '@angular/common/http';
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ItemComponent implements OnInit {
 
-  constructor(private activeRoute: ActivatedRoute,private httpClient: HttpClient) { }
+  constructor(private activeRoute: ActivatedRoute,private httpClient: HttpClient, private _location: Location) { }
   curr;
   temp;
   ngOnInit(): void {
@@ -30,5 +31,8 @@ export class ItemComponent implements OnInit {
       console.log(this.curr)
     });
   }
+  }
+  backClicked() {
+    this._location.back();
   }
 }
