@@ -48,7 +48,7 @@ a:hover,a:active {
 .box {
   box-sizing: border-box;
   width: 100vw;
-  height: 40vh;
+  height: 42vh;
 }
 
 .navi {
@@ -302,54 +302,6 @@ a:hover,a:active {
   padding: 0 10px 0;
 }
 
-.menu {
-  display: none;
-}
-
-@media only screen and (max-width: 1400px) {
-  .navi ul {
-    display: none;
-  }
-  .menu {
-    display: block;
-    flex: 1;
-    position: absolute;
-    top: 0;
-    left: 20px;
-    color: snow;
-    font-size: 3em;
-    font-family: "Montserrat", sans-serif;
-    margin-left: 20px;
-    margin-top: 10px;
-    z-index: 40;
-    cursor: pointer;
-  }
-  .menu-content {
-    display: none;
-  }
-  .menu:hover .menu-content {
-    display: block;
-  }
-  .menu:hover ul {
-    padding: 10px;
-    background-color: rgba(53, 54, 56, 0.753);
-  }
-  .menu:hover li {
-    margin-top: 3px;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  #pic {
-    width: 400px;
-  }
-}
-
-@media only screen and (max-height: 650px) {
-  .kolo {
-    display: none;
-  }
-}
 
 /* ////////////////////////GALERIA////////////////////// */
 
