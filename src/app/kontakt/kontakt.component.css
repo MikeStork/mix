@@ -1,0 +1,59 @@
+
+#addf{
+    /* max-width: 1200px !important; */
+    background: rgba(45, 45, 45, 0.8) !important;
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 67%);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transform: scale(1.2);
+   }
+   @media screen and (max-width: 980px){
+    #addf{
+        transform: scale(1);
+    }
+}
+.loc-text{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    font-weight: 100;
+    font-size: xx-large;
+    text-align: center;
+    background-color: #4e4e4e45 !important;
+    
+}
+#map{
+    flex: none;
+}
+.flexit{
+    padding-left: 0 10px 0;
+}
+.haerka{
+    color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.301);
+}
+.cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* font-size: 0.8em; */
+    padding: 0 10px;
+
+}
+.cont div{
+    flex: 1;
+    min-width: 315px;
+}
+.tel, .tel a, .mail a, .mail{
+    text-align: left;
+}
+.cont a:hover{
+    color: brown;
+}
+.cont div{
+    background: rgba(45, 45, 45, 0.164) !important;
+    box-shadow: 0 2px 8px 0 rgb(0 0 0 / 67%);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 5px;
+    margin: 5px;
+}

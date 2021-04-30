@@ -12,6 +12,7 @@ import { MarkaComponent } from './marka/marka.component';
 import { ItemComponent } from './item/item.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { KontaktComponent } from './kontakt/kontakt.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     LokalizacjaComponent,
     SpacerComponent,
     MarkaComponent,
-    ItemComponent
+    ItemComponent,
+    KontaktComponent
   ],
   imports: [
     BrowserModule,
