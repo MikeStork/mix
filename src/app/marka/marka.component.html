@@ -12,9 +12,9 @@
         <div class="notfound" *ngIf="items.length==0">
           <h2>Nie znaleziono żadnych wyników</h2>
         </div>
-      <a *ngFor="let i of items; let j = index" [routerLink]="['item',nazwa, j, filtr]">
+      <a *ngFor="let i of items; let j = index" [routerLink]="['item',nazwa, j, czyfiltr]">
         <div class="card">
-          <img src="{{i.src}}" />
+          <img loading="lazy" src="{{i.src}}" />
           <p>{{i.name}}</p>
         </div>
       </a>

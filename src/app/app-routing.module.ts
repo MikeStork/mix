@@ -10,7 +10,7 @@ import { PreloadAllModules } from '@angular/router';
 import { KontaktComponent } from './kontakt/kontakt.component';
 const routes: Routes = [
   {path:"prezentacja",component:PrezentacjaComponent},
-  {path:"",component:PrezentacjaComponent},
+  {path:"",component:PrezentacjaComponent, pathMatch: 'full'},
   {path:"./",component:PrezentacjaComponent},
   {path:"sprzet",component:SprzetComponent},
   {path:"sprzet/marka/:id",component:MarkaComponent},

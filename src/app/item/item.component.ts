@@ -20,13 +20,13 @@ export class ItemComponent implements OnInit {
   }
   getMarks(sel:String,nr:number,filtr:string) {
     console.log(filtr)
-    if(filtr != 'undefined'){
-    this.httpClient.get<any>('http://localhost:80/Typescript/mixbocianapi/sprzety.php?s='+sel+'&e='+filtr).subscribe(resp=>{
+    if(filtr != 'default'){
+    this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/sprzety.php?s='+sel+'&e='+filtr).subscribe(resp=>{
       this.curr = resp[nr];
       console.log(this.curr)
     });
   }else{
-    this.httpClient.get<any>('http://localhost:80/Typescript/mixbocianapi/sprzety.php?s='+sel).subscribe(resp=>{
+    this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/sprzety.php?s='+sel).subscribe(resp=>{
       this.curr = resp[nr];
       console.log(this.curr)
     });

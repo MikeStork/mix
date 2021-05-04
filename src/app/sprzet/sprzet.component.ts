@@ -13,7 +13,7 @@ export class SprzetComponent implements OnInit {
     this.getMarks();
   }
   getMarks() {
-    this.httpClient.get<any>('http://localhost:80/Typescript/mixbocianapi/marki.php').subscribe(resp=>{
+    this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/marki.php').subscribe(resp=>{
       this.marks = resp;
     });
   }

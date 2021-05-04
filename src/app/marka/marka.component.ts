@@ -14,6 +14,7 @@ export class MarkaComponent implements OnInit {
   items;
   nazwa:string;
   filtr:string='';
+  czyfiltr:string='default';
   ngOnInit(): void {
     this.activeRoute.params.subscribe((param) => {
       this.getMarks(param.id);
@@ -25,14 +26,16 @@ export class MarkaComponent implements OnInit {
     this._location.back();
   }
   getMarks(sel:String) {
-    if(this.filtr){
-      this.httpClient.get<any>('http://localhost:80/Typescript/mixbocianapi/sprzety.php?s='+sel+'&e='+this.filtr).subscribe(resp=>{
+    if(this.filtr!=''){
+      this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/sprzety.php?s='+sel+'&e='+this.filtr).subscribe(resp=>{
         this.items = resp;
+        this.czyfiltr=this.filtr;
         console.log(resp);
       });
     }else{
-      this.httpClient.get<any>('http://localhost:80/Typescript/mixbocianapi/sprzety.php?s='+sel).subscribe(resp=>{
+      this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/sprzety.php?s='+sel).subscribe(resp=>{
         this.items = resp;
+        this.czyfiltr = 'default';
         console.log(resp);
       });
       
