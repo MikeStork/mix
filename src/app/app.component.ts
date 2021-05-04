@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mix';
+  ngOnInit(){
+    document.querySelector("nav-link").addEventListener('click',()=>{
+      document.querySelector('.navbar-toggler').toggleAttribute('collapsed');
+    })
+  }
 
 }

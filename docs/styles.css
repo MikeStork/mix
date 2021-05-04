@@ -87,13 +87,6 @@ a:hover,a:active {
 .cfi--active {
   opacity: 1;
 }
-/* @media (orientation: portrait) {
-    .cfi {
-      left: -60%;
-      text-align: center;
-      width: 240vw;
-    }
-  } */
 .banner {
   box-sizing: border-box;
   height: -webkit-max-content;
@@ -158,52 +151,6 @@ a:hover,a:active {
     opacity: 0;
   }
 }
-/* .breakof2 {
-      display: block;
-      position: absolute;
-      height: 30px;
-      width: 120%;
-      bottom: -15px;
-      /* background-color: rgb(255, 255, 255); */
-/*
-  background-image: url(img/connector.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: repeat-x;
-  margin-left: auto;
-  margin-right: auto;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  }
-  div class="breakof2"></div>
-  */
-/* Projekt do zastanowienia się nad
-  .podpol {
-      display: block;
-      position: absolute;
-      height: 180px;
-      width: 80px;
-      bottom: -95px;
-      background-color: rgb(95, 95, 95);
-      border-radius: 50px;
-      margin-left: auto;
-      margin-right: auto;
-      left: 50%;
-      transform: translateX(-50%);
-  } 
-  
-  <div class="podpol">a
-      </div> */
-/* .pol3 {
-      position: absolute;
-      top: 190vh;
-  }
-  
-  .pol4 {
-      position: absolute;
-      top: 205vh;
-  } */
 .kolo {
   box-sizing: border-box;
   background-color: rgba(169, 179, 255, 0.253);
@@ -297,19 +244,9 @@ a:hover,a:active {
   cursor: pointer;
   transform: scale(1.15);
 }
-/* height: calc(przyjmuje wartości, oraz wartości schowane w klasie) */
 #galer a {
   overflow: hidden;
 }
-/* ////////////////////////////////////////// */
-/* div produktów  */
-/* ////////////////////////////////////////// */
-/* ////////////////////////////////////////// */
-/* produkty */
-/* ////////////////////////////////////////// */
-/* ////////////////////////////////////////// */
-/* tabelki w aktualnosciach */
-/* ////////////////////////////////////////// */
 .flexit {
   display: flex;
   align-items: center;
