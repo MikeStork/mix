@@ -11,6 +11,17 @@
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 465px) {
+  .card{
+    margin: 5px;
+    width: 130px;
+    height: 170px;
+    font-size: 12px;
+  }
+  .zwrot{
+    font-size: x-large;
+  }
+}
 .card:hover {
   transform: scale(1.07);
   transition: transform ease-in-out 200ms;
@@ -38,7 +49,7 @@
     
 }
 .searchbar{
-  max-width: 200px;
+  flex: 5;
   color: aliceblue;
   border-radius: 5px;
   height: 100%;
@@ -55,7 +66,10 @@
 .search{
   height: 2em;
   float: right;
-  width: 300px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: row;
+  padding: 2px 5px 0;
 }
 .filtertools{
   width: 100%;

@@ -32,3 +32,13 @@ a:focus {
 nav{
   backdrop-filter: blur(2px);
 }
+@media screen and (max-width: 465px) {
+.navbar-brand{
+  width: 70%;
+}
+.logo{
+  height: unset;
+  width: 100%;
+}
+
+}
