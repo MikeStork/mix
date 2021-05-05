@@ -23,12 +23,10 @@ export class ItemComponent implements OnInit {
     if(filtr != 'default'){
     this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/sprzety.php?s='+sel+'&e='+filtr).subscribe(resp=>{
       this.curr = resp[nr];
-      console.log(this.curr)
     });
   }else{
     this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/sprzety.php?s='+sel).subscribe(resp=>{
       this.curr = resp[nr];
-      console.log(this.curr)
     });
   }
   }

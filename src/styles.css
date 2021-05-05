@@ -8,7 +8,9 @@
   font-family: "Oxygen";
   src: url("assets/fonty/Oxygen/Oxygen-Light.ttf");
 }
-
+:root{
+  --fb-offset: -300px;
+}
 * {
   padding: 0;
   margin: 0;

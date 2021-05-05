@@ -19,7 +19,6 @@ export class MarkaComponent implements OnInit {
     this.activeRoute.params.subscribe((param) => {
       this.getMarks(param.id);
       this.nazwa = param.id;
-      console.log(this.items);
     });
   }
   goBack() {
@@ -30,13 +29,11 @@ export class MarkaComponent implements OnInit {
       this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/sprzety.php?s='+sel+'&e='+this.filtr).subscribe(resp=>{
         this.items = resp;
         this.czyfiltr=this.filtr;
-        console.log(resp);
       });
     }else{
       this.httpClient.get<any>('https://mixbocian.eu/mixbocianapi/sprzety.php?s='+sel).subscribe(resp=>{
         this.items = resp;
         this.czyfiltr = 'default';
-        console.log(resp);
       });
       
     }

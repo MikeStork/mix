@@ -192,23 +192,34 @@ LokalizacjaComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdef
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
-/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "1kSV");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "tyNb");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "jhN1");
+/* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "1kSV");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "tyNb");
+
 
 
 
 class AppComponent {
-    constructor() {
+    constructor(metaService) {
+        this.metaService = metaService;
         this.title = 'mix';
     }
     ngOnInit() {
-        document.querySelector("nav-link").addEventListener('click', () => {
-            document.querySelector('.navbar-toggler').toggleAttribute('collapsed');
+        this.metaService.addTags([
+            { name: 'keywords', content: 'MixBocian, Mix, Bocian, Kuchnie, Alno, Alnokuchnie, Miele, Kitchenaid, Meble kuchenne, AGD, Bosch, Siemens, BSH, Opole, Kuchnie opole, Liebherr, Burger, kuchnie burger, Bauformat, kuchnie bauformat, Impuls  ' },
+            { name: 'description', content: 'Angular Universal Example' },
+            { name: 'robots', content: 'index, follow' }
+        ]);
+        document.querySelector(".nudge").addEventListener('mouseenter', () => {
+            document.querySelector(".fb-drawer").classList.add('fbxpnd');
+        });
+        document.querySelector(".fb-drawer").addEventListener('mouseleave', () => {
+            document.querySelector(".fb-drawer").classList.remove('fbxpnd');
         });
     }
 }
-AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
-AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 20, vars: 0, consts: [[1, "navbar", "navbar-expand-xl", "navbar-dark", "fixed-top", "navbar-custom"], [1, "container-fluid"], ["routerLink", "", 1, "navbar-brand"], ["src", "assets/img/logofirmowemixbocian_min.svg", "alt", "", 1, "logo"], ["type", "button", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarNavAltMarkup", 1, "collapse", "navbar-collapse"], [1, "navbar-nav"], ["routerLink", "prezentacja", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], ["routerLink", "sprzet", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], ["routerLink", "lokalizacja", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], ["routerLink", "spacer", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], ["routerLink", "kontakt", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
+AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["Meta"])); };
+AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 28, vars: 0, consts: [[1, "navbar", "navbar-expand-xl", "navbar-dark", "fixed-top", "navbar-custom"], [1, "container-fluid"], ["routerLink", "", 1, "navbar-brand"], ["src", "assets/img/logofirmowemixbocian_min.svg", "alt", "", 1, "logo"], ["type", "button", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarNavAltMarkup", 1, "collapse", "navbar-collapse"], [1, "navbar-nav"], ["routerLink", "prezentacja", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], ["routerLink", "sprzet", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], ["routerLink", "lokalizacja", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], ["routerLink", "spacer", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], ["routerLink", "kontakt", "data-bs-toggle", "collapse", "data-bs-target", "#navbarNavAltMarkup", "aria-controls", "navbarNavAltMarkup", 1, "nav-link"], [1, "fb-drawer"], [1, "nudge"], ["src", "assets/img/facebook-slider.png", "alt", ""], [1, "fbcont"], ["data-href", "https://www.facebook.com/BocianAlnoKuchnie", "data-tabs", "timeline, events", "loading", "lazy", "data-width", "", "data-height", "", "data-small-header", "false", "data-adapt-container-width", "true", "data-hide-cover", "false", "data-show-facepile", "true", 1, "fb-page"], ["cite", "https://www.facebook.com/BocianAlnoKuchnie", 1, "fb-xfbml-parse-ignore"], ["href", "https://www.facebook.com/BocianAlnoKuchnie"]], template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "section");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "div", 1);
@@ -240,8 +251,22 @@ AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCompo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "router-outlet");
-    } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_1__["NgbNavbar"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterOutlet"]], styles: [".navbar-custom[_ngcontent-%COMP%] {\r\n  background-image: linear-gradient(\r\n    to bottom,\r\n    rgba(27, 27, 27, 0.9),\r\n    rgba(27, 27, 27, 0.8),\r\n    rgba(27, 27, 27, 0.7),\r\n    rgba(27, 27, 27, 0.5),\r\n    rgba(27, 27, 27, 0.3),\r\n    rgba(37, 37, 37, 0.01)\r\n  );\r\n}\r\n.nawig[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\r\n  font-size: xx-large;\r\n}\r\nul[_ngcontent-%COMP%] {\r\n  text-align: center;\r\n}\r\na[_ngcontent-%COMP%] {\r\n  transition-property: transform;\r\n  transition: 0.25s ease;\r\n}\r\na[_ngcontent-%COMP%]:hover {\r\n  transform: scale(1.03);\r\n  \r\n}\r\na[_ngcontent-%COMP%]:focus {\r\n  color: rgb(255, 255, 255) !important;\r\n}\r\n.nav-link[_ngcontent-%COMP%]{\r\n  color: rgb(225, 225, 225, .9) !important;\r\n}\r\nnav[_ngcontent-%COMP%]{\r\n  -webkit-backdrop-filter: blur(2px);\r\n          backdrop-filter: blur(2px);\r\n}\r\n@media screen and (max-width: 465px) {\r\n.navbar-brand[_ngcontent-%COMP%]{\r\n  width: 70%;\r\n}\r\n.logo[_ngcontent-%COMP%]{\r\n  height: unset;\r\n  width: 100%;\r\n}\r\n\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7Ozs7Ozs7O0dBUUM7QUFDSDtBQUNBO0VBQ0UsbUJBQW1CO0FBQ3JCO0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLDhCQUE4QjtFQUM5QixzQkFBc0I7QUFDeEI7QUFDQTtFQUNFLHNCQUFzQjs7QUFFeEI7QUFDQTtFQUNFLG9DQUFvQztBQUN0QztBQUNBO0VBQ0Usd0NBQXdDO0FBQzFDO0FBQ0E7RUFDRSxrQ0FBMEI7VUFBMUIsMEJBQTBCO0FBQzVCO0FBQ0E7QUFDQTtFQUNFLFVBQVU7QUFDWjtBQUNBO0VBQ0UsYUFBYTtFQUNiLFdBQVc7QUFDYjs7QUFFQSIsImZpbGUiOiJhcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5uYXZiYXItY3VzdG9tIHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQoXHJcbiAgICB0byBib3R0b20sXHJcbiAgICByZ2JhKDI3LCAyNywgMjcsIDAuOSksXHJcbiAgICByZ2JhKDI3LCAyNywgMjcsIDAuOCksXHJcbiAgICByZ2JhKDI3LCAyNywgMjcsIDAuNyksXHJcbiAgICByZ2JhKDI3LCAyNywgMjcsIDAuNSksXHJcbiAgICByZ2JhKDI3LCAyNywgMjcsIDAuMyksXHJcbiAgICByZ2JhKDM3LCAzNywgMzcsIDAuMDEpXHJcbiAgKTtcclxufVxyXG4ubmF3aWcgbGkge1xyXG4gIGZvbnQtc2l6ZTogeHgtbGFyZ2U7XHJcbn1cclxudWwge1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxufVxyXG5hIHtcclxuICB0cmFuc2l0aW9uLXByb3BlcnR5OiB0cmFuc2Zvcm07XHJcbiAgdHJhbnNpdGlvbjogMC4yNXMgZWFzZTtcclxufVxyXG5hOmhvdmVyIHtcclxuICB0cmFuc2Zvcm06IHNjYWxlKDEuMDMpO1xyXG4gIFxyXG59XHJcbmE6Zm9jdXMge1xyXG4gIGNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSkgIWltcG9ydGFudDtcclxufVxyXG4ubmF2LWxpbmt7XHJcbiAgY29sb3I6IHJnYigyMjUsIDIyNSwgMjI1LCAuOSkgIWltcG9ydGFudDtcclxufVxyXG5uYXZ7XHJcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDJweCk7XHJcbn1cclxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNDY1cHgpIHtcclxuLm5hdmJhci1icmFuZHtcclxuICB3aWR0aDogNzAlO1xyXG59XHJcbi5sb2dve1xyXG4gIGhlaWdodDogdW5zZXQ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbn1cclxuXHJcbn0iXX0= */"] });
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "img", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "blockquote", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "a", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26, "Studio kuchenne Mix-Bocian");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](27, "router-outlet");
+    } }, directives: [_ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_2__["NgbNavbar"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterLinkWithHref"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouterOutlet"]], styles: [".navbar-custom[_ngcontent-%COMP%] {\r\n  background-image: linear-gradient(\r\n    to bottom,\r\n    rgba(27, 27, 27, 0.9),\r\n    rgba(27, 27, 27, 0.8),\r\n    rgba(27, 27, 27, 0.7),\r\n    rgba(27, 27, 27, 0.5),\r\n    rgba(27, 27, 27, 0.3),\r\n    rgba(37, 37, 37, 0.01)\r\n  );\r\n}\r\n.nawig[_ngcontent-%COMP%]   li[_ngcontent-%COMP%] {\r\n  font-size: xx-large;\r\n}\r\nul[_ngcontent-%COMP%] {\r\n  text-align: center;\r\n}\r\na[_ngcontent-%COMP%] {\r\n  transition-property: transform;\r\n  transition: 0.25s ease;\r\n}\r\na[_ngcontent-%COMP%]:hover {\r\n  transform: scale(1.03);\r\n}\r\na[_ngcontent-%COMP%]:focus {\r\n  color: rgb(255, 255, 255) !important;\r\n}\r\n.nav-link[_ngcontent-%COMP%] {\r\n  color: rgb(225, 225, 225, 0.9) !important;\r\n}\r\nnav[_ngcontent-%COMP%] {\r\n  -webkit-backdrop-filter: blur(2px);\r\n          backdrop-filter: blur(2px);\r\n}\r\n.fb-drawer[_ngcontent-%COMP%] {\r\n  position: fixed;\r\n  top: 100px;\r\n  right: var(--fb-offset);\r\n  display: flex;\r\n  flex-direction: row;\r\n  transition: .9s ease-in-out;\r\n  z-index: 100;\r\n}\r\n.nudge[_ngcontent-%COMP%] {\r\n  height: 100%;\r\n  width: 35px;\r\n  padding-top: 10px;\r\n  opacity: .85;\r\n  \r\n}\r\n.fbcont[_ngcontent-%COMP%] {\r\n  border-radius: 5px;\r\n  padding: 5px;\r\n  width: 300px;\r\n  background-color: #067ad2a8;\r\n  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);\r\n  backdrop-filter: blur(4px);\r\n  -webkit-backdrop-filter: blur(4px);\r\n  border-radius: 10px;\r\n  border: 1px solid rgba(255, 255, 255, 0.18);\r\n}\r\n.fbxpnd[_ngcontent-%COMP%]{\r\n  right: 0;\r\n}\r\n@media screen and (max-width: 465px) {\r\n  .fb-drawer[_ngcontent-%COMP%]{\r\n    display: none;\r\n  }\r\n  .navbar-brand[_ngcontent-%COMP%] {\r\n    width: 70%;\r\n  }\r\n  .logo[_ngcontent-%COMP%] {\r\n    height: unset;\r\n    width: 100%;\r\n  }\r\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7Ozs7Ozs7O0dBUUM7QUFDSDtBQUNBO0VBQ0UsbUJBQW1CO0FBQ3JCO0FBQ0E7RUFDRSxrQkFBa0I7QUFDcEI7QUFDQTtFQUNFLDhCQUE4QjtFQUM5QixzQkFBc0I7QUFDeEI7QUFDQTtFQUNFLHNCQUFzQjtBQUN4QjtBQUNBO0VBQ0Usb0NBQW9DO0FBQ3RDO0FBQ0E7RUFDRSx5Q0FBeUM7QUFDM0M7QUFDQTtFQUNFLGtDQUEwQjtVQUExQiwwQkFBMEI7QUFDNUI7QUFDQTtFQUNFLGVBQWU7RUFDZixVQUFVO0VBQ1YsdUJBQXVCO0VBQ3ZCLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsMkJBQTJCO0VBQzNCLFlBQVk7QUFDZDtBQUNBO0VBQ0UsWUFBWTtFQUNaLFdBQVc7RUFDWCxpQkFBaUI7RUFDakIsWUFBWTtFQUNaO3FDQUNtQztBQUNyQztBQUNBO0VBQ0Usa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixZQUFZO0VBQ1osMkJBQTJCO0VBQzNCLGdEQUFnRDtFQUNoRCwwQkFBMEI7RUFDMUIsa0NBQWtDO0VBQ2xDLG1CQUFtQjtFQUNuQiwyQ0FBMkM7QUFDN0M7QUFDQTtFQUNFLFFBQVE7QUFDVjtBQUNBO0VBQ0U7SUFDRSxhQUFhO0VBQ2Y7RUFDQTtJQUNFLFVBQVU7RUFDWjtFQUNBO0lBQ0UsYUFBYTtJQUNiLFdBQVc7RUFDYjtBQUNGIiwiZmlsZSI6ImFwcC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm5hdmJhci1jdXN0b20ge1xyXG4gIGJhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudChcclxuICAgIHRvIGJvdHRvbSxcclxuICAgIHJnYmEoMjcsIDI3LCAyNywgMC45KSxcclxuICAgIHJnYmEoMjcsIDI3LCAyNywgMC44KSxcclxuICAgIHJnYmEoMjcsIDI3LCAyNywgMC43KSxcclxuICAgIHJnYmEoMjcsIDI3LCAyNywgMC41KSxcclxuICAgIHJnYmEoMjcsIDI3LCAyNywgMC4zKSxcclxuICAgIHJnYmEoMzcsIDM3LCAzNywgMC4wMSlcclxuICApO1xyXG59XHJcbi5uYXdpZyBsaSB7XHJcbiAgZm9udC1zaXplOiB4eC1sYXJnZTtcclxufVxyXG51bCB7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG59XHJcbmEge1xyXG4gIHRyYW5zaXRpb24tcHJvcGVydHk6IHRyYW5zZm9ybTtcclxuICB0cmFuc2l0aW9uOiAwLjI1cyBlYXNlO1xyXG59XHJcbmE6aG92ZXIge1xyXG4gIHRyYW5zZm9ybTogc2NhbGUoMS4wMyk7XHJcbn1cclxuYTpmb2N1cyB7XHJcbiAgY29sb3I6IHJnYigyNTUsIDI1NSwgMjU1KSAhaW1wb3J0YW50O1xyXG59XHJcbi5uYXYtbGluayB7XHJcbiAgY29sb3I6IHJnYigyMjUsIDIyNSwgMjI1LCAwLjkpICFpbXBvcnRhbnQ7XHJcbn1cclxubmF2IHtcclxuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoMnB4KTtcclxufVxyXG4uZmItZHJhd2VyIHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgdG9wOiAxMDBweDtcclxuICByaWdodDogdmFyKC0tZmItb2Zmc2V0KTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiByb3c7XHJcbiAgdHJhbnNpdGlvbjogLjlzIGVhc2UtaW4tb3V0O1xyXG4gIHotaW5kZXg6IDEwMDtcclxufVxyXG4ubnVkZ2Uge1xyXG4gIGhlaWdodDogMTAwJTtcclxuICB3aWR0aDogMzVweDtcclxuICBwYWRkaW5nLXRvcDogMTBweDtcclxuICBvcGFjaXR5OiAuODU7XHJcbiAgLyogd3JpdGluZy1tb2RlOiB2ZXJ0aWNhbC1ybDtcclxuICB0ZXh0LW9yaWVudGF0aW9uOiBzaWRld2F5cy1yaWdodDsgKi9cclxufVxyXG4uZmJjb250IHtcclxuICBib3JkZXItcmFkaXVzOiA1cHg7XHJcbiAgcGFkZGluZzogNXB4O1xyXG4gIHdpZHRoOiAzMDBweDtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDY3YWQyYTg7XHJcbiAgYm94LXNoYWRvdzogMCA4cHggMzJweCAwIHJnYmEoMzEsIDM4LCAxMzUsIDAuMzcpO1xyXG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xyXG4gIC13ZWJraXQtYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XHJcbiAgYm9yZGVyLXJhZGl1czogMTBweDtcclxuICBib3JkZXI6IDFweCBzb2xpZCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMTgpO1xyXG59XHJcbi5mYnhwbmR7XHJcbiAgcmlnaHQ6IDA7XHJcbn1cclxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNDY1cHgpIHtcclxuICAuZmItZHJhd2Vye1xyXG4gICAgZGlzcGxheTogbm9uZTtcclxuICB9XHJcbiAgLm5hdmJhci1icmFuZCB7XHJcbiAgICB3aWR0aDogNzAlO1xyXG4gIH1cclxuICAubG9nbyB7XHJcbiAgICBoZWlnaHQ6IHVuc2V0O1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"] });
 
 
 /***/ }),
@@ -345,13 +370,11 @@ class ItemComponent {
         if (filtr != 'default') {
             this.httpClient.get('https://mixbocian.eu/mixbocianapi/sprzety.php?s=' + sel + '&e=' + filtr).subscribe(resp => {
                 this.curr = resp[nr];
-                console.log(this.curr);
             });
         }
         else {
             this.httpClient.get('https://mixbocian.eu/mixbocianapi/sprzety.php?s=' + sel).subscribe(resp => {
                 this.curr = resp[nr];
-                console.log(this.curr);
             });
         }
     }
@@ -479,7 +502,6 @@ class PrezentacjaComponent {
     getPosts() {
         this.httpClient.get('https://mixbocian.eu/mixbocianapi/posty.php').subscribe(resp => {
             this.posts = resp;
-            console.log(this.posts);
         });
     }
 }
@@ -664,7 +686,6 @@ class MarkaComponent {
         this.activeRoute.params.subscribe((param) => {
             this.getMarks(param.id);
             this.nazwa = param.id;
-            console.log(this.items);
         });
     }
     goBack() {
@@ -675,14 +696,12 @@ class MarkaComponent {
             this.httpClient.get('https://mixbocian.eu/mixbocianapi/sprzety.php?s=' + sel + '&e=' + this.filtr).subscribe(resp => {
                 this.items = resp;
                 this.czyfiltr = this.filtr;
-                console.log(resp);
             });
         }
         else {
             this.httpClient.get('https://mixbocian.eu/mixbocianapi/sprzety.php?s=' + sel).subscribe(resp => {
                 this.items = resp;
                 this.czyfiltr = 'default';
-                console.log(resp);
             });
         }
     }
